@@ -2,6 +2,7 @@
 /**
  * times_table - prints the 9 times table
  * Return: nothing
+ *Auth: Lourdes Mboya
  */
 void times_table(void)
 {

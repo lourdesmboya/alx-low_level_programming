@@ -3,7 +3,7 @@
  *_isalpha - checks for an alphabetic character
  *
  *@c: the letter the function checks
- *
+ *Auth: Lourdes Mboya
  *Return: 1 if c is a letter, 0 otherwise
  */
 int _isalpha(int c)

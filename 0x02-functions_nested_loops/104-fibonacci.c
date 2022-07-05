@@ -2,7 +2,7 @@
 
 /**
  * main - prints fibonnaci numbers
- *
+ *Auth: Lourdes Mboya
  * Description: prints from 1 to 98
  * Return: Always(0) Success
  */

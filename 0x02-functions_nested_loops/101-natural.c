@@ -2,7 +2,7 @@
 
 /**
  * main - sums nultplies of 3 or 5
- *
+ *Auth: Lourdes Mboya
  * Description: multiples between 0 and 1024
  * Return: Always(0) Success
  */

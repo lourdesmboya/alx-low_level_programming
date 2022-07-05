@@ -3,7 +3,7 @@
  *_islower - checks to see if a letter is in lower case
  *
  *@c: the letter the function checks
- *
+ *Auth: Lourdes Mboya
  *Return: 1 if c is lowercase, 0 otherwise
  */
 int _islower(int c)

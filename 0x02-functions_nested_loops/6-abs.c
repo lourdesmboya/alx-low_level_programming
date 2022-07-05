@@ -3,7 +3,7 @@
  *_abs - computes the absolute value of an integer
  *
  *@a: the integer
- *
+ *Auth: Lourdes Mboya
  *Return: 0
  */
 

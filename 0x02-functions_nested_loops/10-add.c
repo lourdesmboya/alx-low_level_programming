@@ -4,7 +4,7 @@
  *
  * @n: first integer
  * @m: second integer
- *
+ *Auth: Lourdes Mboya
  * Return: sum of integers
  */
 int add(int n, int m)

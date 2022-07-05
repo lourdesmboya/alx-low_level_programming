@@ -3,7 +3,7 @@
  *print_sign - returns if a number is positive or negative
  *
  *@n: the number to check
- *
+ *Auth: Lourdes Mboya
  *Return: 1 if positive, 0 if zero, -1 if negative
  */
 
