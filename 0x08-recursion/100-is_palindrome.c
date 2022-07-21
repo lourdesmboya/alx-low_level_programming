@@ -1,69 +1,51 @@
-/*
- * is_palindrome.c
- *
- *
- * Read an input from stdin, print it back to the user and
- * report if it is a palindrome.
- */
+#include "holberton.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-
-#define MAXLENGTH 31
-
-/*
-  calculate the length of the string
- */
-int get_string_length(char *str);
-
-/*
-  return 1 if it is palindrome
-  return 0 if it is not palindrome
- */
-int is_palindrome(char *str);
-
-int main(int argc, char *argv[])
+/**
+* _strlen_recursion - returns the length of string
+* @s: string whose length is to be returned
+*
+* Return: length of s
+*/
+int _strlen_recursion(char *s)
 {
-    char input_string[MAXLENGTH];
+	int length = 1;
 
-    // get user input
-    printf("Enter a string to test: ");
-    scanf("%s", input_string);
-
-    if(is_palindrome(input_string)) {
-        printf("%s is a palindrome\n", input_string);
-    } else {
-        printf("%s is not a palindrome\n", input_string);
-    }
-
-    return 0;
+	if (*s == '\0')
+		return (0);
+	return (length + _strlen_recursion(s + length));
 }
 
-int get_string_length(char *str)
+/**
+* helper - check whther palindrome or not
+* @str: string to check
+* @i: beginning of string
+* @j: end of string
+*
+* Return: 1 if palindrome, 0 if not
+*/
+int helper(char *str, int i, int j)
 {
-    int length = 0;
-    // if it is not '\0' keep moving
-    while(*str != '\0') {
-        str++;
-        length++;
-    }
-    return length;
+	if (i >= j)
+		return (1);
+	if (str[i] != str[j])
+		return (0);
+	return (helper(str, i + 1, j - 1));
 }
 
-int is_palindrome(char *str)
+/**
+* is_palindrome - checks if palindrome
+* @s: string to be checked
+*
+* Return: 1 if palindrome, 0 if not
+*/
+int is_palindrome(char *s)
 {
-    char *head = str;
-    int length = get_string_length(str);
-    char *tail = &str[length - 1];
+	int i = 0;
 
-    // two pointers to check palindrome and no spare space is being used
-    while(head < tail) {
-        if(*head != *tail) {
-            return 0;
-        }
-        head++;
-        tail--;
-    }
-    return 1;
+	i = _strlen_recursion(s) - 1;
+
+	if (!*s)
+		return (1);
+	return (helper(s, 0, i));
 }
 
