@@ -1,2 +1,0 @@
-Trying out Static libraries
-

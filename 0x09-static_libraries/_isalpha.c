@@ -1,5 +1,15 @@
 #include "holberton.h"
+/**
+ *_isalpha - checks for an alphabetic character
+ *
+ *@c: the letter the function checks
+ *Auth: Lourdes Mboya
+ *Return: 1 if c is a letter, 0 otherwise
+ */
 int _isalpha(int c)
 {
-	return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
