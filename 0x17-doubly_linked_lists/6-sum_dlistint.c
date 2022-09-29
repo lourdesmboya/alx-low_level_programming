@@ -1,13 +1,18 @@
 #include "lists.h"
 int sum_dlistint(dlistint_t *head)
 {
-	int sum = 0;
+	long int sum;
+	dlistint_t *tmp;
 
-	while (head)
+	sum = 0;
+	if (head == NULL)
+	return (sum);
+
+	tmp = head;
+	while (tmp)
 	{
-		sum += head->n;
-		head = head->next;
+	sum += tmp->n;
+	tmp = tmp->next;
 	}
-
 	return (sum);
 }

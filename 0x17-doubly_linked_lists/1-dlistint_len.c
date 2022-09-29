@@ -1,13 +1,16 @@
 #include "lists.h"
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t nodes = 0;
+	size_t size;
+
+	size = 0;
+	if (h == NULL)
+	return (size);
 
 	while (h)
 	{
-		nodes++;
-		h = h->next;
+	size++;
+	h = h->next;
 	}
-
-	return (nodes);
+	return (size);
 }
